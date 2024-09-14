@@ -6,8 +6,6 @@
     scroll-behavior: smooth;
 }
 body{
-    /* background-image: url(../images/backgroundImage.jpeg); */
-    /* background-repeat: round; */
     background-color: rgb(20, 19, 23);
 }
 footer{
@@ -70,19 +68,21 @@ a:hover{
 }
 .content {
     padding: 20px;
-    height: 125vh; 
+    height: 140vh; 
 }
-.DeviceInterface{
 
+.DeviceInterface{
+    
     display: none;
+    margin: 28%;
+    margin-top: 30%;
     
 }
-.deviceFrame{
+.devicePositioning{
     position: relative;
-    
 }
 .deviceFrame img{
-    pointer-events: none;
+
 }
 .deviceButtons{
     position: absolute; /* Position this absolutely within the deviceFrame */
@@ -92,6 +92,7 @@ a:hover{
     flex-direction: row;
     width: 100%; 
     height: auto; 
+    pointer-events: auto;
 
 }
 .functionButtons{
@@ -101,6 +102,7 @@ a:hover{
     display: flex;
     flex-direction: column;
     /* margin-left: 10%; */
+    pointer-events: auto;
 
 
 }
@@ -110,8 +112,9 @@ a:hover{
     cursor: pointer;  
     height: auto;
     width: 100%;
-    margin: 5% 6% 0% 6%;
+    margin: 3.9% 6% 0% 6%;
     z-index: 2;
+    filter: drop-shadow(rgba(0,0,0,0.8) 0em 1em 1em )
 
 }
 .functionButtons button:first-child{
@@ -122,8 +125,8 @@ a:hover{
     border: none;                
     cursor: pointer;  
     margin-bottom:10%;
-    margin-left: 80%;
-height: 150%;
+    margin-left: 30%;
+height: 60%;
 width: 100%;
     z-index: -3;
 }
@@ -133,6 +136,32 @@ width: 100%;
     left:3%; /* Center the button horizontally */
     width: 94%;
     height: 65%;
-    background-color: red;
-    z-index: -21;
+    background-color: rgb(0, 0, 0);
+    z-index: -2;
+    color:white;
+    /* background-image: url("../images/interfaceElmts/displayBg.jpg");
+    background-repeat:round; */
+}
+.loading{
+    filter: brightness(0.8);
+}
+.socialLink{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    pointer-events: auto;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 10%;
+    height: auto;
+    margin:5% 10% 5% 10%;
+}
+.iconGrid{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+    z-index: 2;
 }

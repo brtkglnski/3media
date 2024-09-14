@@ -12,22 +12,32 @@
             <canvas id="3mediaDevice">
             </canvas>
             <div class="DeviceInterface">
-                <div class="deviceFrame">
-                    <img src="../../images/deviceElmts/frame.png" alt="x">
+                
+                <div class="devicePositioning">
+                    <div class="deviceFrame">
+                        <img src="../../images/deviceElmts/frame.png" alt="x">
+                    </div>
+                    
                     <div class="deviceButtons">
-                        <button><img src="../../images/deviceElmts/btn1.png" alt=""></button>
-                        <button><img src="../../images/deviceElmts/btn2.png" alt=""></button>
-                        <button><img src="../../images/deviceElmts/btn3.png" alt=""></button>
-                        <button><img src="../../images/deviceElmts/btn4.png" alt=""></button>
+                        <button id="btn1" onclick="changeContent(this.id); return false;"><img src="../../images/deviceElmts/btn1.png" alt=""></button>
+                        <button id="btn2" onclick="changeContent(this.id); return false;"><img src="../../images/deviceElmts/btn2.png" alt=""></button>
+                        <button id="btn3" onclick="changeContent(this.id); return false;"><img src="../../images/deviceElmts/btn3.png" alt=""></button>
+                        <button id="btn4" onclick="changeContent(this.id); return false;"><img src="../../images/deviceElmts/btn4.png" alt=""></button>
                     </div>
                     <div class="functionButtons">
-                        <button><img src="../../images/deviceElmts/togglebtn.png" alt="">
-                            <button><img src="../../images/deviceElmts/sidebtn.png" alt="">
-                                <button><img src="../../images/deviceElmts/sidebtn.png" alt="">
+                        <button  id="togglebtn" onclick="changeContent(this.id); return false;"><img src="../../images/deviceElmts/togglebtn.png" alt="">
+                            <button id="sidebtn1" onclick="changeContent(this.id); return false;"><img src="../../images/deviceElmts/sidebtn.png" alt="">
+                                <button id="sidebtn2" onclick="changeContent(this.id); return false;"><img src="../../images/deviceElmts/sidebtn.png" alt="">
                             </div>
-                    <div class="player"><iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/XIU6T_RwQTo?si=ZGZr_s4z10r84K7M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                    <div id="player" class="player">
+                        <div class="iconGrid">
+                    <a class="socialLink"><img src="../../images/interfaceElmts/Instagram_icon.png" alt="instagram"><label>mediamediamedia.works</label></a>
+                    <a class="socialLink"><img src="../../images/interfaceElmts/Instagram_icon.png" alt="instagram"><label>brtkglnski</label></a>
+                    <a class="socialLink" href="https://github.com/brtkglnski" target="_blank"><img src="../../images/interfaceElmts/Instagram_icon.png" alt="github"><label>brtkglnski</label></a>
+                    </div>
+                                    
                 </div>
-
+            </div>
             </div>
         </div>
         ::after
@@ -35,9 +45,10 @@
 
         </div>
     </main>
-    <!-- <footer>
+    <footer>
         <h1><a class="instalink" target="_blank" href="https://instagram.com/brtkglnski">@brtkglnski</a></h1>
-    </footer> -->
+    </footer>
     <script src="../../script/canvas.js" defer></script>
+    <script src="../../script/player.js" defer></script>
 </body>
 </html>

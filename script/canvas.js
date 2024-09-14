@@ -19,42 +19,36 @@ const deviceInterface = document.querySelector('.DeviceInterface');
       {
         const scrollPosition = window.scrollY;
 
-        // Determine which image to show based on scroll position
-        const imageIndex = Math.min(Math.floor(scrollPosition / 50), imgName.length - 1);
+        const imageIndex = Math.min(Math.floor(scrollPosition / 45), imgName.length - 1);
         if (imageIndex < imgName.length -1) {
-            // During animation: Show the canvas and hide DeviceInterface
+            // During animation
             img.src = imgName[imageIndex];
-            if (deviceInterface) deviceInterface.style.display = 'none';  // Check for null
-            if (canvas) canvas.style.display = 'block';  // Check for null
+            if (deviceInterface) deviceInterface.style.display = 'none'; 
+            if (canvas) canvas.style.display = 'block'; 
         } else {
-            // After animation: Hide the canvas and show DeviceInterface
-            if (canvas) canvas.style.display = 'none';  // Check for null
+            // After animation
+            if (canvas) canvas.style.display = 'none'; 
             if (deviceInterface) deviceInterface.style.display = 'flex'; 
         }
       }
       img.onload = function() {
         function resizeCanvas() {
-            // Get the container dimensions
             const containerWidth = canvas.parentElement.offsetWidth;
             const containerHeight = canvas.parentElement.offsetHeight;
-            
-            // Calculate aspect ratio
+
             const imgAspectRatio = img.width / img.height;
             const containerAspectRatio = containerWidth / containerHeight;
             
             let newWidth, newHeight;
             
             if (containerAspectRatio > imgAspectRatio) {
-                // Container is wider relative to its height
                 newWidth = containerHeight * imgAspectRatio;
                 newHeight = containerHeight;
             } else {
-                // Container is taller relative to its width
                 newWidth = containerWidth;
                 newHeight = containerWidth / imgAspectRatio;
             }
             
-            // Update canvas dimensions
             canvas.width = newWidth;
             canvas.height = newHeight;
             
