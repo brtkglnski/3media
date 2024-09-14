@@ -73,27 +73,66 @@ a:hover{
     height: 125vh; 
 }
 .DeviceInterface{
+
     display: none;
+    
 }
 .deviceFrame{
     position: relative;
+    
+}
+.deviceFrame img{
+    pointer-events: none;
 }
 .deviceButtons{
     position: absolute; /* Position this absolutely within the deviceFrame */
-    top: 12%; /* Center the button vertically */
-    left: 20%; /* Center the button horizontally */
+    top: 0%; /* Center the button vertically */
+    left: 0%; /* Center the button horizontally */
     display: flex;
     flex-direction: row;
-
-    width: 60%; 
+    width: 100%; 
     height: auto; 
+
+}
+.functionButtons{
+    position: absolute; /* Position this absolutely within the deviceFrame */
+    top: 25%; /* Center the button vertically */
+    left: 95%; /* Center the button horizontally */
+    display: flex;
+    flex-direction: column;
+    /* margin-left: 10%; */
+
 
 }
 .deviceButtons button{
     background-color: transparent; 
     border: none;                
     cursor: pointer;  
+    height: auto;
     width: 100%;
+    margin: 5% 6% 0% 6%;
     z-index: 2;
 
+}
+.functionButtons button:first-child{
+    margin-bottom:100%;
+}
+.functionButtons button{
+    background-color: transparent; 
+    border: none;                
+    cursor: pointer;  
+    margin-bottom:10%;
+    margin-left: 80%;
+height: 150%;
+width: 100%;
+    z-index: -3;
+}
+.player{
+    position: absolute; /* Position this absolutely within the deviceFrame */
+    top: 26%; /* Center the button vertically */
+    left:3%; /* Center the button horizontally */
+    width: 94%;
+    height: 65%;
+    background-color: red;
+    z-index: -21;
 }
