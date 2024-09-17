@@ -7,10 +7,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,1,-25" />
     <title>3Media</title>
 </head>
 <body>
     <main class="front">
+            <h1>THE GREATEST ENTERTAINMENT SOURCE.</h1>
+            <h2>IN THE PALM OF YOUR HANDS.</h2>
             <div class="deviceAnimation">
             <canvas id="3mediaDevice">
             </canvas>
@@ -32,7 +35,22 @@
                             <button id="sidebtn1" onclick="changeContent(this.id); return false;"><img src="../../images/deviceElmts/sidebtn.png" alt="">
                                 <button id="sidebtn2" onclick="changeContent(this.id); return false;"><img src="../../images/deviceElmts/sidebtn.png" alt="">
                             </div>
-                    <div id="player" class="player">
+                    <div id="player" class="player fade_in">
+                        <!-- <div class="fileExplorer">
+                            <div class="sectionDivider">
+                                <div class="fileList">
+                                    
+                                    <ul class="fileOptions">
+                                        <li id="downloads" onclick="folderChange(this.id); return false;"><i class="material-symbols-outlined">folder</i>Downloads</li>
+                                        <li id="projects" onclick="folderChange(this.id); return false;"><i class="material-symbols-outlined">folder</i>Projects</li>
+                                        <li id="music" onclick="folderChange(this.id); return false;"><i class="material-symbols-outlined">folder</i>Music</li>
+                                        <li id="other" onclick="folderChange(this.id); return false;"><i class="material-symbols-outlined">folder</i>Other</li>
+                                    </ul>
+                                </div>
+                                <div id="fileGrid" class="fileGrid">
+                                </div>
+                            </div>
+                        </div> -->
                         <!-- <div class="iconGrid">
                     <a class="socialLink" href="https://www.instagram.com/mediamediamedia.works/" target="_blank"><img src="../../images/interfaceElmts/Instagram_icon.png" alt="instagram"><label>works</label></a>
                     <a class="socialLink" href="https://www.instagram.com/brtkglnski/" target="_blank"><img src="../../images/interfaceElmts/Instagram_icon.png" alt="instagram"><label>contact</label></a>
